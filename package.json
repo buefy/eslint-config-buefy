@@ -1,0 +1,43 @@
+{
+  "name": "eslint-config-buefy",
+  "version": "0.0.1",
+  "description": "Official ESLint rules for Buefy",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=production eslint *.js",
+    "unused": "eslint-find-rules --unused"
+  },
+  "keywords": [
+    "buefy",
+    "lint",
+    "vue"
+  ],
+  "author": "Antério Vieira <anteriovieira@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.1",
+    "eslint": "^4.12.0",
+    "eslint-find-rules": "^3.1.1",
+    "greenkeeper-lockfile": "^1.12.0"
+  },
+  "peerDependencies": {
+    "eslint": "^3.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:buefy/eslint-config-buefy.git"
+  }
+}
