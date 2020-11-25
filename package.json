@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=production eslint *.js",
-    "unused": "eslint-find-rules --unused"
+    "unused": "eslint-find-rules --unused",
+    "release": "standard-version && git push --follow-tags"
   },
   "keywords": [
     "buefy",
@@ -15,26 +16,27 @@
   "author": "Antério Vieira <anteriovieira@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-friendly-formatter": "^2.0.7",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-html": "^2.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.2.0"
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.1.0"
   },
   "devDependencies": {
     "codecov": "^3.0.0",
-    "cross-env": "^5.1.1",
-    "eslint": "^4.18.2",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.14.0",
     "eslint-find-rules": "^3.1.1",
-    "greenkeeper-lockfile": "^1.12.0"
+    "greenkeeper-lockfile": "^1.12.0",
+    "standard-version": "^9.0.0"
   },
   "peerDependencies": {
-    "eslint": "^4.18.2"
+    "eslint": "^7.0.0"
   },
   "repository": {
     "type": "git",
