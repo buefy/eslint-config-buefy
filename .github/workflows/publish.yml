@@ -1,0 +1,32 @@
+name: Create and Upload Release
+on:
+  push:
+    tags: ['v*']
+jobs:
+  build:
+    name: Create Github Release
+    runs-on: ubuntu-latest
+    container:
+      image: node:lts
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: "[📖 **Changelog**](https://github.com/buefy/eslint-config-buefy/CHANGELOG.md)"
+          draft: false
+          prerelease: false
+      - name: Publish to npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - run: yarn && yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

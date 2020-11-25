@@ -17,28 +17,28 @@ module.exports = {
         // eslint
         // allow debugger during development
         'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-        'indent': ['error', 4, { 'SwitchCase': 1 }],
+        indent: ['error', 4, { SwitchCase: 1 }],
         'space-before-function-paren': ['error', {
-            'anonymous': 'always',
-            'named': 'never'
+            anonymous: 'always',
+            named: 'never'
         }],
         'max-len': ['error', {
-            'code': 100,
-            'tabWidth': 4,
-            'ignoreUrls': true,
-            'ignoreStrings': true,
-            'ignoreTemplateLiterals': true,
-            'ignoreRegExpLiterals': true
+            code: 100,
+            tabWidth: 4,
+            ignoreUrls: true,
+            ignoreStrings: true,
+            ignoreTemplateLiterals: true,
+            ignoreRegExpLiterals: true
         }],
         'no-console': ['warn'],
         'arrow-parens': ['error', 'always'],
         'max-depth': ['error', 4],
         'vue/html-indent': ['error', 4],
         'vue/max-attributes-per-line': [2, {
-            'singleline': 2,
-            'multiline': {
-                'max': 1,
-                'allowFirstLine': false
+            singleline: 2,
+            multiline: {
+                max: 1,
+                allowFirstLine: false
             }
         }],
 
